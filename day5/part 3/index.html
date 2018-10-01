@@ -6,53 +6,48 @@
     </head>
 
     <body>
-        <script>
-            function hoverOverSurname(){
-                alert('hovering over surname')
-            }
-        </script>
-        <h2>The example of form</h2>
+            
+        <h2>The example of a form</h2>
         <div class="container is fl">
         <form>
             <div class="field">
                 <label class="lebel">name</label>
-                <input class="input" 
-                       type="text" 
-                       onmouseover="alert('you hovered over name')"/>
+                <input id="name" class="input" type="text" />
                        
                 
             </div>
 
             <div class="field">
                 <label class="lebel">surname</label>
-                <input class="input" type="text" onmouseover="hoverOverSurname()"/>
+                <input id="surname" class="input" type="text" />
             </div>
     
             <div class="field">
                 <label class="lebel">age</label>
-                <input class="input" type="number"/>
+                <input id="age" class="input" type="number"/>
             </div>
 
             <div class="field">
                 <label class="lebel">gender</label>
-                <input class="input" type="text"/>
+                <input id="gendar" class="input" type="text"/>
             </div>
 
             <div class="field">
                 <label class="lebel">address</label>
-                <input class="input" type="text"/>
+                <input id="address" class="input" type="text"/>
             </div>
 
             <div class="field">
                     <label class="lebel">phone number</label>
-                    <input class="input" type="number"/>
+                    <input id="number" class="input" type="number"/>
             </div>
             
             <div class="field">
-                <input class="button is-primary" type="submit" value="submit" onclick = "alert ('clicked on submit')"/>
+                <input id="submit" class="button is-primary" type="submit" value="submit" />
 
             </div>
         </form>
         </div>
+        <script src ="script.js"> </script>
     </body>
 </html>
