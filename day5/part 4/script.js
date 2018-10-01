@@ -109,7 +109,7 @@ function validateAddress(){
 function validatePhone(){
     var phone = document.getElementById('number')
      var nameErrorMessage = document.getElementById("phone_error") 
-     if(phone.value == "" || phone.value == undefined){
+     if(phone.charAt(0) != 0 && phone.charAt(1) != 7 && phone.charAt(2) != 3){
        
         nameErrorMessage.classList.remove('is-invisible')
      }
