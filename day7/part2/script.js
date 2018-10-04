@@ -34,6 +34,11 @@ window .onload = function(){
     getLines(getToken(), selectedAgency)
     })
 
+    var backButton = document.getElementById('submit-goto-agencies')
+    backButton.addEventListener('click', function (event) {
+    event.preventDefault()
+    show('agencies-form')
+  })
 
     var logoutButton = document.getElementById('submit-logout')
     logoutButton.addEventListener('click', function (event) {
@@ -46,8 +51,15 @@ window .onload = function(){
     })
 
  }
-
  
+ mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuZGFucmFzIiwiYSI6ImNqbXQ4bXNmdDE3c28zcGw4aDFzcDNtZzIifQ.YUMvE4M3amui4t8ZgBiFSw';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+    center: [-74.50, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
 
 function show(formId){
  document.getElementById('login-form').style.display = 'none'
